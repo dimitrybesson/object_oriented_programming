@@ -8,6 +8,7 @@ class Person
   end
 end
 
+
 class Student < Person
   def learn
     puts "I get it!"
@@ -20,16 +21,13 @@ class Instructor < Person
   end
 end
 
-# Step 6
 chris = Instructor.new("Chris")
 chris.greeting
 
-# Step 7
 cristina = Student.new("Cristina")
 cristina.greeting
 
-# Step 8
 chris.teach
 cristina.learn
+
 #cristina.teach
-# This does not work because cristina is an instance of Student class, which does not have the #learn instance method.
