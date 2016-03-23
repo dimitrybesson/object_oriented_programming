@@ -1,8 +1,8 @@
 class Person
   attr_accessor :name
 
-  def initialize
-    @name
+  def initialize(name)
+    @name = name
   end
 
   def greeting
@@ -21,9 +21,3 @@ class Instructor < Person
     puts "Everything in Ruby is an Object"
   end
 end
-
-
-student = Student.new
-student.name = "Dima"
-student.learn
-student.greeting
