@@ -1,14 +1,14 @@
 class Rover
   attr_accessor :x_coordinate, :y_coordinate, :direction
-  def initialize(name, x_coordinate, y_coordinate, direction)
-    @name = name
+  def initialize(landing_plateau, x_coordinate, y_coordinate, direction)
+    @landing_plateau = landing_plateau
     @x_coordinate = x_coordinate
     @y_coordinate = y_coordinate
     @direction = direction
   end
 
   def display
-    puts "Name: #{@name}"
+    puts "Landing Plateau: #{@landing_plateau}"
     puts "X: #{@x_coordinate}"
     puts "Y: #{@y_coordinate}"
     puts "direction: #{@direction}"
@@ -35,6 +35,7 @@ class Rover
   end
 
   def move
+    #if can_move?, else Warning message and don't allow movement
     case @direction
       when "N"
         @y_coordinate += 1
@@ -59,5 +60,14 @@ class Rover
 
   def rover_output
     "#{@x_coordinate} #{@y_coordinate} #{@direction}"
+  end
+
+  def display_map
+    puts @landing_plateau.x_max
+    puts @landing_plateau.y_max
+  end
+
+  def can_move?
+    
   end
 end

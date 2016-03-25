@@ -5,8 +5,6 @@ def create_plateau(plateau_x, plateau_y)
   plateau_list << new_plateau
 end
 
-
-
 will create Rover.new
 def create_rover(name, x, y, direction)
   new_rover = Rover.new(name, x, y, direction)
@@ -16,7 +14,13 @@ end
 
 ######PLATEAU
 Plateau knows the location of all of its rovers
+(perhaps have a method that does a visual representation of the plateau)
 
 
 ######ROVER
- Ideally, rover knows the plateau it is on 
+ Ideally, rover knows the plateau it is on
+
+ Perhaps the rover can have a navigation function within itself, as in it understands whether or not it is at the edge of the plateau and whether or not it can move forward
+ Maybe this method can switch on if there is ever a problem with mission control
+ As in if a communication method ever encounters an error, we rescue with this new method
+ (Perhaps create a method that does a visual display of the plateau?)
