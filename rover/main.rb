@@ -1,5 +1,6 @@
 require_relative 'rover'
 require_relative 'plateau'
+require_relative 'missioncontrol'
 
 #PROGRAM COMMANDS
 

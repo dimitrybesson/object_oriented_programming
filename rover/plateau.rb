@@ -18,9 +18,9 @@ class Plateau
     # Alternatively,...
   end
 
-  def create_rover(rover_id, rover_name, x_coordinate, y_coordinate, direction)
-    new_rover = Rover.new(rover_name, x_coordinate, y_coordinate, direction)
-    @rover_array << new_rover
-
-  end
+  # def create_rover(rover_id, rover_name, x_coordinate, y_coordinate, direction)
+  #   new_rover = Rover.new(rover_name, x_coordinate, y_coordinate, direction)
+  #   @rover_array << new_rover
+  #
+  # end
 end

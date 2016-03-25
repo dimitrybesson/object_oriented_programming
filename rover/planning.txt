@@ -1,0 +1,22 @@
+######MISSION CONTROL
+will create Plateau.new
+def create_plateau(plateau_x, plateau_y)
+  new_plateau = Plateau.new(x, y)
+  plateau_list << new_plateau
+end
+
+
+
+will create Rover.new
+def create_rover(name, x, y, direction)
+  new_rover = Rover.new(name, x, y, direction)
+  rover_list << new_rover
+end
+
+
+######PLATEAU
+Plateau knows the location of all of its rovers
+
+
+######ROVER
+ Ideally, rover knows the plateau it is on 
