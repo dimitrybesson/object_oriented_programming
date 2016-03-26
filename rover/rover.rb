@@ -1,10 +1,18 @@
 class Rover
-  attr_accessor :x_coordinate, :y_coordinate, :direction
+  attr_accessor :x_coordinate, :y_coordinate, :direction, :id
+  @@rover_counter = 0
+
+  def self.rover_counter
+    @@rover_counter
+  end
+
   def initialize(landing_plateau, x_coordinate, y_coordinate, direction)
     @landing_plateau = landing_plateau
     @x_coordinate = x_coordinate
     @y_coordinate = y_coordinate
     @direction = direction
+    @id = @@rover_counter
+    @@rover_counter += 1
   end
 
   def display

@@ -32,7 +32,7 @@ require_relative 'missioncontrol'
 #PROGRAM COMMANDS USING MISSION CONTROL
 
   # mc = MissionControl.new
-  # p = mc.get_plateau_initial
-  # r = mc.get_rover_initial
+  # p = mc.initialize_plateau
+  # r = mc.initialize_rover
   # mc.get_rover_instruction
   # puts r.rover_output
