@@ -34,17 +34,38 @@ class Rover
     end
   end
 
+  def can_move?
+  end
+
   def move
     #if can_move?, else Warning message and don't allow movement
+    #give this method the ability to take an argument (step) of varying sizes, that defaults to 1
+    warning = "Warning! About to run off the cliff!"
     case @direction
       when "N"
-        @y_coordinate += 1
+        if (@y_coordinate + 1) < @landing_plateau.y_max
+          @y_coordinate += 1
+        else
+          puts warning
+        end
       when "S"
-        @y_coordinate -= 1
+        if (@y_coordinate - 1) < 0
+          @y_coordinate -= 1
+        else
+          puts warning
+        end
       when "E"
-        @x_coordinate += 1
+        if (@x_coordinate + 1) < @landing_plateau.x_max
+          @x_coordinate += 1
+        else
+          puts warning
+        end
       when "W"
-        @x_coordinate -= 1
+        if (@y_coordinate - 1) < 0
+          @x_coordinate -= 1
+        else
+          puts warning
+        end
     end
   end
 
@@ -67,7 +88,5 @@ class Rover
     puts @landing_plateau.y_max
   end
 
-  def can_move?
-    
-  end
+
 end
