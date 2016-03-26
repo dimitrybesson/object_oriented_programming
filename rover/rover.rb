@@ -43,25 +43,25 @@ class Rover
     warning = "Warning! About to run off the cliff!"
     case @direction
       when "N"
-        if (@y_coordinate + 1) < @landing_plateau.y_max
+        if (@y_coordinate + 1) <= @landing_plateau.y_max
           @y_coordinate += 1
         else
           puts warning
         end
       when "S"
-        if (@y_coordinate - 1) < 0
+        if (@y_coordinate - 1) >= 0
           @y_coordinate -= 1
         else
           puts warning
         end
       when "E"
-        if (@x_coordinate + 1) < @landing_plateau.x_max
+        if (@x_coordinate + 1) <= @landing_plateau.x_max
           @x_coordinate += 1
         else
           puts warning
         end
       when "W"
-        if (@y_coordinate - 1) < 0
+        if (@y_coordinate - 1) >= 0
           @x_coordinate -= 1
         else
           puts warning
