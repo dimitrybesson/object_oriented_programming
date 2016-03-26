@@ -24,3 +24,7 @@ Plateau knows the location of all of its rovers
  Maybe this method can switch on if there is ever a problem with mission control
  As in if a communication method ever encounters an error, we rescue with this new method
  (Perhaps create a method that does a visual display of the plateau?)
+
+
+######EXCEPTION
+It would be cool if I could have the exception show where you were in the instructions and maybe ask you if you woul like to augment them. Also maybe a visual representation of the location
