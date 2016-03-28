@@ -1,4 +1,5 @@
 require_relative 'item'
 require_relative 'order'
 require_relative 'inventory'
+require_relative 'test'
 require 'table_print'

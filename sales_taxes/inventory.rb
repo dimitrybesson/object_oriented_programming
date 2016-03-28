@@ -46,8 +46,12 @@ class Inventory
       attributes[:import] = false
     end
     # Setting price, quantity
-    attributes[:price] = item_details.pop
-    attributes[:quantity] = item_details.shift
+    attributes[:price] = item_details.pop.to_f
+    attributes[:quantity] = item_details.shift.to_i
+    # Setting description
+    item_details.delete("at")
+    description = item_details.join(" ")
+    attributes[:description] = description
     p attributes
     create_item(attributes)
   end
@@ -55,11 +59,19 @@ class Inventory
   def create_item(attributes)
     item = Item.new(attributes)
     @inventory_list << item
+    item
   end
 
-  def add_item_to_order(order, item)
+  def add_item_to_order(order, item) # select item from inventory and add it to an order
     #look through inventory, pick item
     #order.add_item(item)
+  end
+
+  def get_item
+  end
+
+  def delete_item
+
   end
 
 end

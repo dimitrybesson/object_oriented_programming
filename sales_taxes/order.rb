@@ -13,7 +13,7 @@ class Order
   #   end
   # end
 
-  def display
+  def display # added table_print gem to display in a nice table lol
     tp @order_list, :type, :price, :import, :quantity, :tax, :duty, :description
   end
 
@@ -44,6 +44,17 @@ class Order
   end
 
   def output
+    total = 0
+    sales_taxes = 0
+    @order_list.each do |item|
+      taxes = item.tax + item.duty
+      final_price = item.price + taxes
+      total += final_price
+      sales_taxes += taxes
+      puts "#{item.quantity} #{item.description}: #{"%.2f" %f = final_price.round(2)}"
+    end
+    puts "Sales Taxes: #{"%.2f" %f = sales_taxes.round(2)}"
+    puts "Total: #{"%.2f" %f = total.round(2)}"
 
   end
 end
