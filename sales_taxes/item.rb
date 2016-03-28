@@ -1,13 +1,13 @@
 class Item
   attr_accessor :type, :price, :import, :quantity, :tax, :duty, :description
 
-  def initialize(type, price, import, quantity = 1, tax = "--", duty = "--", description = "")
+  def initialize(type, price, import, quantity = 1, description = "")
     @type = type
     @price = price
     @import = import
     @quantity = quantity
-    @tax = tax # can we have this and duty start off 
-    @duty = duty
+  #  @tax = tax # can we have this and duty start off
+  #  @duty = duty
     @description = description
   end
 end
@@ -19,11 +19,11 @@ class Order
     @item_list = Array.new
   end
 
-  def display_order
+  def display
     puts "ITEM LIST:"
-    puts "TYPE:\tPRICE:\tIMPORT:\tQUANT:\tTAX:\tDUTY\tDESCRIPTION:"
+    puts "TYPE:\tPRICE:\tIMPORT:\tQUANT:\tTAX:\tDUTY:\tDESCRIPTION:"
     @item_list.each do |item|
-      puts "#{item.type}\t#{item.price}\t#{item.import}\t#{item.quantity}\t#{item.tax}\t#{item.duty}\t#{item.description}"
+      puts "#{item.type}\t#{item.price}\t#{item.import}\t#{item.quantity}\t#{item.tax || '--'}\t#{item.duty || '--'}\t#{item.description}"
     end
   end
 
@@ -41,9 +41,15 @@ class Order
     end
   end
 
-  def caculate_duty
+  def calculate_duty
+    @item_list.each do |item|
+      if item.import
+        item.duty = (item.price * 0.05).round(2)
+      end
+    end
   end
 
-  def print_reciept
+  def output
+    
   end
 end
