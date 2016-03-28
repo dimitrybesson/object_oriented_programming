@@ -5,12 +5,16 @@ class Inventory
     @inventory_list = Array.new
   end
 
+  # def display
+  #   puts "INVENTORY:"
+  #   puts "TYPE:\t\tPRICE:\tIMPORT:\tQUANT:\tTAX:\tDUTY:\tDESCRIPTION:"
+  #   @inventory_list.each do |item|
+  #     puts "#{item.type}\t\t#{item.price}\t#{item.import}\t#{item.quantity}\t#{item.tax || '--'}\t#{item.duty || '--'}\t#{item.description}"
+  #   end
+  # end
+
   def display
-    puts "INVENTORY:"
-    puts "TYPE:\t\tPRICE:\tIMPORT:\tQUANT:\tTAX:\tDUTY:\tDESCRIPTION:"
-    @inventory_list.each do |item|
-      puts "#{item.type}\t\t#{item.price}\t#{item.import}\t#{item.quantity}\t#{item.tax || '--'}\t#{item.duty || '--'}\t#{item.description}"
-    end
+    tp @inventory_list, :type, :price, :import, :quantity, :description
   end
 
   def input_item
