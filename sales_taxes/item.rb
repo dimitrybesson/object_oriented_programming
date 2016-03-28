@@ -1,14 +1,14 @@
 class Item
   attr_accessor :type, :price, :import, :quantity, :tax, :duty, :description
 
-  def initialize(type, price, import, quantity = 1, description = "")
-    @type = type
-    @price = price
-    @import = import
-    @quantity = quantity
+  def initialize(attributes = {})
+    @type = attributes[:type]
+    @price = attributes[:price]
+    @import = attributes[:import]
+    @quantity = attributes[:quantity] || 1
   #  @tax = tax # can we have this and duty start off
   #  @duty = duty
-    @description = description
+  #  @description = attributes[:description]
   end
 end
 
@@ -50,6 +50,6 @@ class Order
   end
 
   def output
-    
+
   end
 end
