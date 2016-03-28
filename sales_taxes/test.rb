@@ -24,7 +24,7 @@
   # o.calculate_duty
   # o.output
 
-#Input 2 Some of the output values are slightly off, I think this is because I generally saved rounding until the end to maximize accuracy
+#Input 2 Some of the output values are slightly off, I think this is because I generally saved rounding until the end to maximize accuracy. Also I didn't fully understand how they wanted us to round in the instructions
   # i = Inventory.new
   # o = Order.new
   #
