@@ -1,6 +1,15 @@
 class Rover
   attr_accessor :x_coordinate, :y_coordinate, :direction, :id
-  @@rover_counter = 0
+  @@rover_counter = 0 # yes, I know, I will change this to class instance variables, testing it out with cool_counter
+  @cool_counter = 0
+
+  class << self
+    attr_accessor :cool_counter
+  end
+
+  # def self.increase
+  #   @cool_counter += 1
+  # end
 
   def self.rover_counter
     @@rover_counter
@@ -13,6 +22,7 @@ class Rover
     @direction = direction
     @id = @@rover_counter
     @@rover_counter += 1
+    Rover.cool_counter += 1
   end
 
   def display

@@ -28,3 +28,11 @@ Plateau knows the location of all of its rovers
 
 ######EXCEPTION
 It would be cool if I could have the exception show where you were in the instructions and maybe ask you if you woul like to augment them. Also maybe a visual representation of the location
+
+
+To Do:
+clean up can_move? and move methods
+move can_move? into plateau
+have plateau be aware of obstacles, and have can_move? take them into account
+write into Rover initialize method the Rover push into MC's rover list
+write a test program for sample cases
