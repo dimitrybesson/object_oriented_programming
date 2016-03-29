@@ -1,15 +1,12 @@
 class Rover
   attr_accessor :x_coordinate, :y_coordinate, :direction, :id
   @@rover_counter = 0 # yes, I know, I will change this to class instance variables, testing it out with cool_counter
-  @cool_counter = 0
+  @cool_counter = 0 # this is just for practice, don't worry about it
 
   class << self
     attr_accessor :cool_counter
   end
 
-  # def self.increase
-  #   @cool_counter += 1
-  # end
 
   def self.rover_counter
     @@rover_counter
@@ -32,13 +29,6 @@ class Rover
     puts "direction: #{@direction}"
   end
 
-  # def read_initial(rover_initial)
-  #   initial = rover_initial.split(" ") #now we have a list of strings
-  #   @x_coordinate = initial[0].to_f #they are all floats in case I need more accuracy in the future
-  #   @y_coordinate = initial[1].to_f
-  #   @direction = initial[-1]
-  # end
-
   def read_instruction(rover_instruction) #input is an array from main.rb
     #instruction_array = rover_instruction.split("")
     rover_instruction.each do |step|
@@ -53,6 +43,7 @@ class Rover
   end
 
   def can_move?
+    #for now, the functionality of this method is hard coded into .move.
   end
 
   def move
