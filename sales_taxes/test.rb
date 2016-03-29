@@ -39,19 +39,19 @@
   # o.output
 
   #Input 3 Same thing with rounding in this one
-  i = Inventory.new
-  o = Order.new
-
-  perfume = i.input_item
-  # 1 imported bottle of perfume at 27.99
-  perfume2 = i.input_item
-  # 1 bottle of perfume at 18.99
-  medicine = i.input_item
-  # 1 packet of headache pills at 9.75
-  chocolates = i.input_item
-  # 1 box of imported chocolates at 11.25
-
-  o.add_items(perfume, perfume2, medicine, chocolates)
-  o.calculate_tax
-  o.calculate_duty
-  o.output
+  # i = Inventory.new
+  # o = Order.new
+  #
+  # perfume = i.input_item
+  # # 1 imported bottle of perfume at 27.99
+  # perfume2 = i.input_item
+  # # 1 bottle of perfume at 18.99
+  # medicine = i.input_item
+  # # 1 packet of headache pills at 9.75
+  # chocolates = i.input_item
+  # # 1 box of imported chocolates at 11.25
+  #
+  # o.add_items(perfume, perfume2, medicine, chocolates)
+  # o.calculate_tax
+  # o.calculate_duty
+  # o.output
